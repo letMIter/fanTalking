@@ -1,0 +1,35 @@
+<h1>FanTalking</h1>
+<h3>詳細</h3>
+<div class="group">
+    <p><%= @group.name %></p>
+    <p><%= @group.image %></p>
+    <p><%= @group.content %></p>
+    <p>
+        <strong>Hashbody:</strong>
+        <%= render_with_hashtags(@group.hashbody) %>
+    </p>
+</div>
+
+<div class="comment-wrapper">
+    <p>コメント一覧</p>
+    <% @comments.each do |c| %>
+        <div>
+            <%= c.user.email unless c.user.blank? %>
+            <br>
+            <%= c.content %>
+        </div>
+            <br>
+    <% end %>
+
+    <% if user_signed_in? %>
+        <%= form_with(model: [@group, @comment], local: true) do |f| %>
+            <%= f.text_area :content %>
+            <%= button_tag type: "submit" do %>
+                <i class="far fa-comments"></i> コメントする
+            <% end %>
+        <% end %>
+    <% end %>
+</div>
+
+
+<%= link_to "投稿一覧に戻る", groups_path %>

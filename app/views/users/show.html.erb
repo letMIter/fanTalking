@@ -1,0 +1,20 @@
+<% if current_user.id == @user.id %>
+    <div class="links">
+        <span class="profile-edit"><%= link_to "プロフィール編集", edit_user_registration_path %></span>
+        <span class="profile-logout"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></span>
+    </div>
+
+<div class="profile-container">
+    <p class="profile-name">なまえ  <span class="profile-name-v"><%= @user.name %></span></p>
+    <p class="profile-fan">推し　  <span class="profile-fan-v"><%= @user.fan %>　&　<%= @user.fan2 %>　&　<%= @user.fan3 %></span></p>
+</div>
+
+<h2 class="user_post">自分の投稿</h2>
+<% @user.groups.each do |t| %>
+    <%= t.user.name %>
+    <%= t.image %>
+    <%= t.content %>
+<% end %>
+
+
+<% end %>

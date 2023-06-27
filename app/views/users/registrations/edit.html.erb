@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag 'signup', :media => "all" %>
+<h2>編集 <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :なまえ %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "なまえ" %>
+  </div>
+  <div class="field">
+    <%= f.label :めーる %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  <div class="field">
+    <%= f.label :推し %><br />
+    <%= f.text_field :fan, autofocus: true %> 
+    <%= f.text_field :fan2, autofocus: true %> 
+    <%= f.text_field :fan3, autofocus: true %> 
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ぱすわーど %> <i>(変更しない場合は空欄)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> 文字以上</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ぱすわーど確認 %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :現在のぱすわーど %> <i>(変更保存のため)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "あっぷでーと" %>
+  </div>
+<% end %>
+
+
+<div> <%= button_to "アカウント削除", registration_path(resource_name), data: { confirm: "本当に削除しますか？", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+
+<%= link_to "戻る", :back %>

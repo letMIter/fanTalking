@@ -1,0 +1,2 @@
+module CreateHashtagsHelper
+end

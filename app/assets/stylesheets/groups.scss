@@ -1,0 +1,56 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/**/
+.new-container h1 {
+    font-size: 25px;
+    margin-left: 40px;
+    color: #4C3D3D;
+    //height: 80px;
+    width: 100%;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.field-container {
+    margin-left: 80px;
+    color: #4C3D3D;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.field {
+    padding-top: 10px;
+}
+
+// .field-name input[type="text"] {
+//     width: 50%;
+//     height: 40px;
+//     font-size: 20px;
+//     margin-left: 40px;
+//     color: #4C3D3D;
+//     font-weight: lighter;
+    
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 5px;
+// }
+
+textarea {
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 40px;
+    color: #4C3D3D;
+    font-weight: lighter;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}

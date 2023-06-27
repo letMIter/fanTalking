@@ -1,0 +1,11 @@
+<%= form_for @group do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :size => 140 %> 
+  <%= f.label :image %>
+  <%= f.text_field :image, :size => 140 %> 
+  <%= f.label :content %>
+  <%= f.text_field :content, :size => 140 %> 
+  <%= f.label :fan %>
+  <%= f.text_field :hashbody, :size => 140%>
+  <%= f.submit "編集する" %>
+<% end %>

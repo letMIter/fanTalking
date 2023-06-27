@@ -1,0 +1,108 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    background-color: #F4EDE1;
+}
+
+.meet-with h1 {
+    font-size: 30px;
+    font-weight: lighter;
+    color: #362E2A;
+    background-color: rgba($color: #A78C81, $alpha: 0.5);  
+    display: flex;
+    // padding: 10px;
+}
+
+.image-container {
+    padding-top: 20px;
+    height: 100px;
+    width: 600px;
+    // background-image: url("topcoffee.jpg");
+}
+
+.image-top {
+    height: 400px;
+    width: 700;
+}
+.meet-with {
+    position: relative;
+}
+
+.meet-with img {
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.meet-with-one {
+    position: absolute;
+    bottom: 200px;
+    right: 600px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    padding:10px;
+    // padding-left: 10px;
+    // margin: 100px 20% 0 auto;
+    color: #362E2A;
+    font-size: 50px;
+}
+
+.meet-with-two {
+    position: absolute;
+    bottom: 100px;
+    right: 450px;
+    width: 200px;
+    height: 50px;
+    // margin: -20px 10% 0 auto;
+    text-align: right;
+    padding:10px 10px;
+    color: #362E2A;
+    font-size: 50px;
+    //display: block;
+}
+
+.points h1 {
+    font-size: 30px;
+    font-weight: lighter;
+    color: #362E2A;
+    background-color: rgba($color: #A78C81, $alpha: 0.5);  
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //padding: 10px;
+}
+
+.points {
+    height: 50px;
+    width: 90%;
+    padding-left: 40px;
+    padding-top: 20px;
+    // margin: 150px auto;
+}
+
+.points-one {
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.points-two {
+    padding-left: 50px;
+}
+
+.how-to-use {
+    font-size: 25px;
+    font-weight: lighter;
+    width: 150px;
+    margin: 100px 10% 0 auto;
+    text-align: right;
+}
+
+.how-to-use a {
+    color: #362E2A;
+    text-decoration: none;
+}
+.how-to-use a:hover {
+    color: #C499BA;
+}

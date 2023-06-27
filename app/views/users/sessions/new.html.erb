@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'signup', :media => "all" %>
+<h2>ろぐいん</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :めーる %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "めーるあどれす" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ぱすわーど %><br />
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "ぱすわーど" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :自動的にろぐいん %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ろぐいん", class: "submit_button" %>
+  </div>
+<% end %>
+
+<div class="links">
+  <%= render "users/shared/links" %>
+</div>

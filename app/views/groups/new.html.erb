@@ -1,0 +1,31 @@
+<div class="new-container">
+  <h1>New</h1>
+</div>
+
+<%= form_for @group do |f| %>
+<div class="field-container">
+  <div class="field">
+    <%= f.label :name %>
+    <div class="field-name">
+      <%= f.text_field :name, :size => 140%>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <label for="image-btn">
+      <%= f.file_field :image, class: "hidden" %>
+    </label>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, :size => 140 %>
+  </div>
+  <div class="field">
+    <%= f.label :fan %>
+    <div class="field-name">
+      <%= f.text_field :hashbody, :size => 140%>
+    </div>
+  </div>
+  <%= f.submit "投稿する" %>
+<% end %>
+<%= link_to "投稿一覧に戻る", groups_path %>

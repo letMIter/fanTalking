@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>おたかふぇ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1> おたかふぇ</h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "とっぷ", root_path%></li>
+        <li><%= link_to "とうこう", groups_path%></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "すけじゅーる", schedules_path%></li>
+          <%= link_to "まいぺーじ", user_path(current_user.id) %>
+        <% end %>
+        <% if !user_signed_in? %>
+          <%= link_to "ろぐいん/さいんあっぷ", new_user_session_path %>
+        <% end %>
+      </ul>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

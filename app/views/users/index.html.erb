@@ -1,0 +1,6 @@
+<h2>ユーザーの投稿一覧</h2>
+<% @user.groups.each do |t| %>
+    <%= t.user.name %>
+    <%= t.image %>
+    <%= t.content %>
+<% end %>

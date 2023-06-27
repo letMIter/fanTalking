@@ -1,0 +1,104 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.links {
+    font-size: 25px;
+    margin-left: 40px;
+    color: #4C3D3D;
+    height: 80px;
+    // width: 100%;
+    font-weight: lighter;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.links a{
+    color: #4C3D3D;
+    text-decoration: none;
+    
+    border: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.links a:hover {
+    color: #fff;
+    background-color: #4C3D3D;
+}
+
+.profile-edit {
+    margin: 5px;
+    padding: 10px;
+    
+    background-color: #F4EDE1;
+    border-radius: 20px;
+    // color: white;
+}
+
+.profile-logout {
+    margin: 5px;
+    padding: 10px;
+    background-color: #F4EDE1;
+    border-radius: 20px;
+}
+
+.profile-container {
+    margin-left: 80px;
+    margin-bottom: 50px;
+    color: #4C3D3D;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.profile-name {
+    padding: 20px;
+}
+.profile-name-v {
+    padding: 20px;
+    background-color: #fff;
+    // width: 200px;
+}
+.profile-fan {
+    padding: 20px;
+    // background-color: #fff;
+}
+.profile-fan-v {
+    padding: 20px;
+    background-color: #fff;
+    // width: 200px;
+}
+
+.user_post{
+    margin-left: 40px;
+    padding: 10px;
+    background-color: #A78C81;
+    border-radius: 20px;
+    color: #fff;
+    width: 200px;
+}
+// .logout-container {
+//     font-size: 25px;
+//     margin-left: 40px;
+//     color: #4C3D3D;
+//     height: 80px;
+//     width: 100%;
+//     font-weight: lighter;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-top: 20px;
+// }
+
+// .logout-container a{
+//     color: #4C3D3D;
+//     text-decoration: none;
+// }
+
+// .logout-container a:hover {
+//     color: #C499BA;
+//     text-decoration: none;
+// }
