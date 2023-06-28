@@ -5,9 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Tag.create([
-    { tag_name: 'タグ1' },
-    { tag_name: 'タグ2' },
-    { tag_name: 'タグ3' }
-])
