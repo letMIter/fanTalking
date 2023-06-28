@@ -1,29 +1,39 @@
 <%= stylesheet_link_tag 'signup', :media => "all" %>
-<h2>ろぐいん</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :めーる %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "めーるあどれす" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :ぱすわーど %><br />
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "ぱすわーど" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :自動的にろぐいん %>
+<div class="box">
+  <div class="box-inner">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <h1>ろぐいん</h1>
+      <div class="box-email">
+        <%= f.label :めーる %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "めーるあどれす" %>
+      </div>
+      <div class="box-password">
+        <div class="a-row">
+          <div class="column-left">
+            <%= f.label :ぱすわーど %><br />
+          </div>
+          <div class="column-right">
+            <%= link_to "ぱすわーどを忘れた場合", new_user_password_path %>
+          </div>
+        </div>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "ぱすわーど" %>
+      </div>
+      <div class="box-login">
+        <%= f.submit "ろぐいん", class: "submit_button" %>
+        <% if devise_mapping.rememberable? %>
+          <div class="remember">
+            <%= f.check_box :remember_me %>
+            <%= f.label :自動的にろぐいん %>
+          </div>
+        <% end %>
+      </div>
+    <div class="box-newusr">
+      <p><span>------------</span> 新しくあかうんとを作成？ <span>------------</span></p>
+      <%= link_to "あかうんとを作成", new_user_registration_path %>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="actions">
-    <%= f.submit "ろぐいん", class: "submit_button" %>
+
   </div>
-<% end %>
-
-<div class="links">
-  <%= render "users/shared/links" %>
 </div>

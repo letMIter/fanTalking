@@ -2,98 +2,181 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    color: #4C3D3D;
 }
 
-h2 {
-    text-align: center;
+.box {
+    width: 350px;
+    height: 400px;
+    margin: 60px auto 0;
+    border-radius: 4px;
+    border: 1px #A78C81 solid;
 }
 
-.field {
+.box-for-signup {
+    width: 350px;
+    height: 615px;
+    margin: 60px auto 0;
+    border-radius: 4px;
+    border: 1px #A78C81 solid;
+}
+
+.box-inner {
+    padding: 20px 26px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+}
+
+.box-name {
+    margin-bottom: 13px;
+    color: #4C3D3D;
+}
+
+.box-fan {
+    margin-bottom: 13px;
+    color: #4C3D3D;
+}
+
+.box-email {
+    margin-bottom: 13px;
+    color: #4C3D3D;
+}
+
+.box-password {
+    margin-bottom: 22px;
+}
+
+.box-name label, .box-fan label, .box-email label, .box-password label {
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+
+.box-name input[type="text"], .box-fan input[type="text"], .box-email input[type="email"], .box-password input[type="password"] {
+    border-style: none;
+    box-sizing: border-box;
     width: 100%;
-    text-align: center;
-    font-size: 18px;
-    margin: 10px;
-    /* margin: 0 auto; */
-}
-
-/* .field_fan {
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 40px;
-} */
-
-
-input[type="text"] {
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    /* margin-left: 40px; */
-    border: none;
-}
-
-
-input[type="email"] {
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    /* margin-left: 40px; */
-    border: none;
-}
-
-input[type="password"] {
-    width: 350px;
-    height: 40px;
-    /* margin-left: 40px; */
-    text-align: center;
-    font-size: 20px;
-    border: none;
+    height: 31px;
+    border: 1px solid #a6a6a6;
+    box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+    border-radius: 3px;
+    padding: 0 7px;
     
 }
 
-.actions {
+.box-fan input[type="text"] {
+    margin-bottom: 3px;
+}
+
+.column-left {
+    float: left;
+}
+
+.column-right {
+    float: right;
+}
+
+.box-password a {
+    font-size: 13px;
+}
+
+.box-login {
+    margin-bottom: 26px;
+}
+
+.box-signup {
+    margin-bottom: 26px;
+}
+
+.box-login input[type="submit"], .box-signup input[type="submit"] {
+    border-style: none;
+    width: 100%;
+    height: 31px;
+    background: rgba(0,0,0,.0);
+    border-radius: 3px;
+    border: 1px #4C3D3D solid;
+}
+
+
+
+.box-login input[type="submit"], .box-signup input[type="submit"]:hover {
+    cursor: pointer;
+    background: #4C3D3D;
+    color: #F4EDE1;
+}
+
+.legal-text {
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+.remember {
+    font-size: 13px;
+    margin-top: 18px;
+    padding-left: 3px;
+}
+
+.box-newusr p {
     text-align: center;
-    font-size: 18px;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 14px;
 }
 
-.links {
-    color: #A78C81;
-    text-decoration: underline;
+.box-newusr p span {
+    text-decoration: line-through;
+    text-decoration-color: #e7e7e7;
+}
+
+.box-newusr a {
+    display: block;
+    width: 100%;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
     text-align: center;
-    font-size: 18px;
-
+    background: #F4EDE1;
+    border-radius: 3px;
+    border: 1px #4C3D3D solid;
 }
 
-.link_color {
-    color: #362E2A;
-    text-decoration: none;
+.box-newusr a:hover {
+    color: #F4EDE1;
+    background: #4C3D3D;
+}
+
+.box-existusr p {
     text-align: center;
-    font-size: 18px;
-    margin: auto;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 14px;
 }
 
-.links :hover {
-    color: #A78C81;
+.box-existusr p span {
+    text-decoration: line-through;
+    text-decoration-color: #e7e7e7;
 }
 
-.submit_button {
-    color: #362E2A;
-    border-radius: 10px;
-    background-color: #F4EDE1;
-    font-size: 18px;
-    width: 150px;
-    height: 30px;
-    border: none;
-    /* margin: 10px; */
+.box-existusr a {
+    display: block;
+    width: 100%;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
+    text-align: center;
+    background: #F4EDE1;
+    border-radius: 3px;
+    border: 1px #4C3D3D solid;
 }
 
-.submit_button:hover {
-    color: #A78C81;
-}
-
-body {
-    color: #362E2A;
+.box-existusr a:hover {
+    color: #F4EDE1;
+    background: #4C3D3D;
 }

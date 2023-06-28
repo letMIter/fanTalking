@@ -1,41 +1,40 @@
 <%= stylesheet_link_tag 'signup', :media => "all" %>
-<h2>さいんあっぷ</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-  <div class="field">
-    <%= f.label :なまえ %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "なまえ" %>
-  </div>
-  <div class="field">
-    <%= f.label :推し %><br />
-    <%= f.text_field :fan, autofocus: true, autocomplete: "fan", placeholder: "推し1" %>
-    <%= f.text_field :fan2, autofocus: true, autocomplete: "fan", placeholder: "推し2" %>
-    <%= f.text_field :fan3, autofocus: true, autocomplete: "fan", placeholder: "推し3" %>
-  </div>
-  <div class="field">
-    <%= f.label :めーる %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "めーるあどれす" %>
-  </div>
+<div class="box-for-signup">
+  <div class="box-inner">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <h1>さいんあっぷ</h1>
+      <div class="box-name">
+        <%= f.label :なまえ %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "なまえ" %>
+      </div>
+      <div class="box-fan">
+        <%= f.label :推し %><br />
+        <%= f.text_field :fan, autofocus: true, autocomplete: "fan", placeholder: "推し1" %>
+        <%= f.text_field :fan2, autofocus: true, autocomplete: "fan", placeholder: "推し2" %>
+        <%= f.text_field :fan3, autofocus: true, autocomplete: "fan", placeholder: "推し3" %>
+      </div>
+      <div class="box-email">
+        <%= f.label :めーる %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "めーるあどれす" %>
+      </div>
+      <div class="box-password">
+        <%= f.label :ぱすわーど（６文字以上） %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "ぱすわーど" %>
+        
+        <%= f.label :ぱすわーど確認 %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" , placeholder: "ぱすわーど"%>
+      </div>
+      <div class="box-signup">
+        <%= f.submit "さいんあっぷ", class: "submit_button" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :ぱすわーど %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> 文字以上)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "ぱすわーど" %>
-  </div>
+    <div class="box-existusr">
+      <p><span>------------</span> 既にあかうんとをお持ちの場合 <span>------------</span></p>
+      <%= link_to "ろぐいんへ", new_user_session_path %>
+    </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :ぱすわーど確認 %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" , placeholder: "ぱすわーど"%>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "さいんあっぷ", class: "submit_button" %>
   </div>
-<% end %>
-
-<div class="links">
-  <%= render "users/shared/links"%>
 </div>
