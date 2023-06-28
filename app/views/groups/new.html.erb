@@ -23,7 +23,7 @@
   <div class="field">
     <%= f.label :fan %>
     <div class="field-name">
-      <%= f.text_field :hashbody, :size => 140%>
+      <%= f.select :hashbody, [[@fan, @fan], [@fan2, @fan2], [@fan3, @fan3]], include_blank: "選択して下さい" %>
     </div>
   </div>
   <%= f.submit "投稿する" %>

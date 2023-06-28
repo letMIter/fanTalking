@@ -16,6 +16,39 @@
     padding-top: 20px;
 }
 
+h3 {
+    color: #4C3D3D;
+}
+
+.search {
+    position: relative;
+}
+
+.search::before,
+.search::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+
+.search select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: none;
+    border-radius: 3px;
+    background-color: #A78C81;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.submitbtn {
+    background-color: yellow;
+}
+
 .field-container {
     margin-left: 80px;
     color: #4C3D3D;
@@ -25,6 +58,44 @@
 
 .field {
     padding-top: 10px;
+}
+
+.groups-container {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.group {
+    border-top: solid #4C3D3D;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.main {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.settings {
+    margin: 5px 0;
+    display: flex;
+    // justify-content: space-between;
+}
+
+.like {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hashtag {
+    color: #A78C81;
 }
 
 // .field-name input[type="text"] {

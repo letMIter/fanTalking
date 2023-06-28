@@ -17,6 +17,15 @@ before_action :authenticate_user!
         @fan = current_user.fan
         @fan2 = current_user.fan2
         @fan3 = current_user.fan3
+        @group = Group.all
+        if params[:search] == nil
+            @groups= Group.all
+        elsif params[:search] == ''
+            @groups= Group.all
+        else
+        #部分検索
+        @groups = Group.where("hashbody LIKE ? ",'%' + params[:search] + '%')
+        end
     end
     def new
         @group = Group.new
