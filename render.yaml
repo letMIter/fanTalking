@@ -2,7 +2,7 @@ databases:
   - name: fanTalking_DB
     databaseName: fantalking_db
     user: fanTalking
-    region: singapore
+    region: oregon
 
 services:
   - type: web
@@ -19,6 +19,6 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-        
+
 
 
