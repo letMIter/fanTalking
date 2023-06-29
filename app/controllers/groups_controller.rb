@@ -32,6 +32,7 @@ before_action :authenticate_user!
         @fan = current_user.fan
         @fan2 = current_user.fan2
         @fan3 = current_user.fan3
+        @username = current_user.name
     end
     def create
         group = Group.new(group_params)

@@ -10,9 +10,11 @@
       </div>
       <div class="box-fan">
         <%= f.label :推し %><br />
-        <%= f.text_field :fan, autofocus: true, autocomplete: "fan", placeholder: "推し1" %>
-        <%= f.text_field :fan2, autofocus: true, autocomplete: "fan", placeholder: "推し2" %>
-        <%= f.text_field :fan3, autofocus: true, autocomplete: "fan", placeholder: "推し3" %>
+        <div class="box-fan-field">
+          <%= f.text_field :fan, autofocus: true, autocomplete: "fan", placeholder: "推し1" %>
+          <%= f.text_field :fan2, autofocus: true, autocomplete: "fan", placeholder: "推し2" %>
+          <%= f.text_field :fan3, autofocus: true, autocomplete: "fan", placeholder: "推し3" %>
+        </div>
       </div>
       <div class="box-email">
         <%= f.label :めーる %><br />

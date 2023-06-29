@@ -2,103 +2,172 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.links {
-    font-size: 25px;
-    margin-left: 40px;
-    color: #4C3D3D;
-    height: 80px;
-    // width: 100%;
-    font-weight: lighter;
-    display: flex;
-    // justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
+* {
+    margin: 0px;
+    padding: 0px;
     text-decoration: none;
-}
-
-.links a{
     color: #4C3D3D;
-    text-decoration: none;
-    
-    border: solid;
-    border-radius: 10px;
-    padding: 10px;
 }
 
-.links a:hover {
-    color: #fff;
-    background-color: #4C3D3D;
+.box-for-show {
+    width: 350px;
+    height: 450px;
+    margin: 30px auto 0;
+    border-radius: 4px;
+    border: 1px #A78C81 solid;
 }
 
-.profile-edit {
-    margin: 5px;
-    padding: 10px;
-    
-    background-color: #F4EDE1;
-    border-radius: 20px;
-    // color: white;
+.box-inner-for-show {
+    padding: 20px 26px;
 }
 
-.profile-logout {
-    margin: 5px;
-    padding: 10px;
-    background-color: #F4EDE1;
-    border-radius: 20px;
+h2 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
 }
 
-.profile-container {
-    margin-left: 80px;
-    margin-bottom: 50px;
+.box-name-show {
+    margin-bottom: 13px;
     color: #4C3D3D;
-    font-size: 25px;
-    font-weight: lighter;
 }
 
-.profile-name {
-    padding: 20px;
+.box-fan-show {
+    margin-bottom: 13px;
+    color: #4C3D3D;
 }
-.profile-name-v {
-    padding: 20px;
+
+.box-email-show {
+    margin-bottom: 13px;
+    color: #4C3D3D;
+}
+
+.box-name-show p {
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+.box-fan-show p {
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+.box-email-show p {
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+
+.box-name-field-show {
+    border-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 31px;
+    border: 1px solid #a6a6a6;
+    box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+    border-radius: 3px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+    margin-left: 3px;
     background-color: #fff;
-    // width: 200px;
+    text-align: center;
 }
-.profile-fan {
-    padding: 20px;
-    // background-color: #fff;
-}
-.profile-fan-v {
-    padding: 20px;
+
+.box-fan-field-show {
+    border-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 31px;
+    border: 1px solid #a6a6a6;
+    box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+    border-radius: 3px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+    margin-left: 3px;
     background-color: #fff;
-    // width: 200px;
+    text-align: center;
+    // display: flex;
 }
 
-.user_post{
-    margin-left: 40px;
-    padding: 10px;
-    background-color: #A78C81;
-    border-radius: 20px;
-    color: #fff;
-    width: 200px;
+.box-email-field-show {
+    border-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 31px;
+    border: 1px solid #a6a6a6;
+    box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+    border-radius: 3px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    background-color: #fff;
+    text-align: center;
+    // display: flex;
 }
-// .logout-container {
-//     font-size: 25px;
-//     margin-left: 40px;
-//     color: #4C3D3D;
-//     height: 80px;
-//     width: 100%;
-//     font-weight: lighter;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding-top: 20px;
-// }
 
-// .logout-container a{
-//     color: #4C3D3D;
-//     text-decoration: none;
-// }
+.links-edit-show {
+    margin-bottom: 14px;
+}
 
-// .logout-container a:hover {
-//     color: #C499BA;
-//     text-decoration: none;
-// }
+.links-edit-show p {
+    text-align: center;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 14px;
+}
+
+.links-edit-show p span {
+    text-decoration: line-through;
+    text-decoration-color: #e7e7e7;
+}
+
+.links-edit-show a {
+    display: block;
+    width: 100%;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
+    text-align: center;
+    background: #F4EDE1;
+    border-radius: 3px;
+    border: 1px #4C3D3D solid;
+}
+
+.links-edit-show a:hover {
+    color: #F4EDE1;
+    background: #4C3D3D;
+}
+
+.links-logout-show p {
+    text-align: center;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 14px;
+}
+
+.links-logout-show p span {
+    text-decoration: line-through;
+    text-decoration-color: #e7e7e7;
+}
+
+.links-logout-show a {
+    display: block;
+    width: 100%;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
+    text-align: center;
+    background: #F4EDE1;
+    border-radius: 3px;
+    border: 1px #4C3D3D solid;
+}
+
+.links-logout-show a:hover {
+    color: #F4EDE1;
+    background: #4C3D3D;
+}

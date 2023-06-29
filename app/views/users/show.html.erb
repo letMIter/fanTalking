@@ -1,20 +1,36 @@
-<% if current_user.id == @user.id %>
-    <div class="links">
-        <span class="profile-edit"><%= link_to "プロフィール編集", edit_user_registration_path %></span>
-        <span class="profile-logout"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></span>
+<%= stylesheet_link_tag 'users', :media => "all" %>
+
+
+<div class="box-for-show">
+    <div class="box-inner-for-show">
+        <h2>ゆーざー</h2>
+        <div class="box-name-show">
+            <p>なまえ</p>
+            <div class="box-name-field-show">
+                <span><%= @user.name %></span>
+            </div>
+        </div>
+        <div class="box-fan-show">
+            <p>推し</p>
+            <div class="box-fan-field-show">
+                <span><%= @user.fan %></span>　<span><%= @user.fan2 %></span>　<span><%= @user.fan3 %></span></p>
+            </div>
+        </div>
+        <div class="box-email-show">
+            <p>めーる</p>
+            <div class="box-email-field-show">
+                <span><%= @user.email %></span>
+            </div>
+        </div>
+        <% if current_user.id == @user.id %>
+            <div class="links-edit-show">
+                <p><span>------------</span> 編集する場合 <span>------------</span></p>
+                <%= link_to "ぷろふぃーる編集", edit_user_registration_path %>
+            </div>
+            <div class="links-logout-show">
+                <p><span>------------</span> ろぐあうとする場合 <span>------------</span></p>
+                <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete %>
+            </div>
+        <% end %>
     </div>
-
-<div class="profile-container">
-    <p class="profile-name">なまえ  <span class="profile-name-v"><%= @user.name %></span></p>
-    <p class="profile-fan">推し　  <span class="profile-fan-v"><%= @user.fan %>　&　<%= @user.fan2 %>　&　<%= @user.fan3 %></span></p>
 </div>
-
-<h2 class="user_post">自分の投稿</h2>
-<% @user.groups.each do |t| %>
-    <%= t.user.name %>
-    <%= t.image %>
-    <%= t.content %>
-<% end %>
-
-
-<% end %>

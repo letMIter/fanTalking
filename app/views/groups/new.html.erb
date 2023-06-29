@@ -1,31 +1,47 @@
-<div class="new-container">
-  <h1>New</h1>
+
+<div class="box-newgroup">
+  <div class="box-inner-newgroup">
+    <%= form_for @group do |f| %>
+      <h1>投稿</h1>
+      <div class="newgroup-name">
+        <%= @username %>
+      </div>
+      <div class="newgroup-content">
+        <%= f.text_area :content, :size => 140 %>
+      </div>
+      <div class="newgroup-image">
+        <%= f.file_field :image, class: "hidden" %>
+      </div>
+      <div class="newgroup-fan">
+        <%= f.select :hashbody, [[@fan, @fan], [@fan2, @fan2], [@fan3, @fan3]], include_blank: "推しを選択" %>
+      </div>
+      <div class="newgroup-post">
+        <%= f.submit "投稿する" %>
+      </div>
+      <div class="box-back">
+        <p><span>------------</span> 一覧に戻る <span>------------</span></p>
+        <%= link_to "投稿一覧に戻る", groups_path %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= form_for @group do |f| %>
-<div class="field-container">
-  <div class="field">
-    <%= f.label :name %>
-    <div class="field-name">
-      <%= f.text_field :name, :size => 140%>
-    </div>
-  </div>
-  <div class="field">
-    <%= f.label :image %>
-    <label for="image-btn">
-      <%= f.file_field :image, class: "hidden" %>
-    </label>
-  </div>
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content, :size => 140 %>
-  </div>
-  <div class="field">
-    <%= f.label :fan %>
-    <div class="field-name">
-      <%= f.select :hashbody, [[@fan, @fan], [@fan2, @fan2], [@fan3, @fan3]], include_blank: "選択して下さい" %>
-    </div>
-  </div>
-  <%= f.submit "投稿する" %>
-<% end %>
-<%= link_to "投稿一覧に戻る", groups_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
