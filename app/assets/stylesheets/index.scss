@@ -1,0 +1,68 @@
+
+.groups-container {
+    width: 800px;
+    height: 550px;
+    margin: 30px auto 0;
+    // border-radius: 4px;
+    // border: 1px #A78C81 solid;
+    padding: 20px 26px;
+}
+
+.links-group-index {
+    display: flex;
+    width: 800px;
+    margin: 3px;
+}
+
+
+.select-fan-index {
+    width: 86%;
+}
+
+.group {
+    border-top: dashed #A78C81;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.main {
+    margin: 5px 0;
+    // display: flex;
+    justify-content: space-between;
+}
+.hashtag-index {
+    color: #A78C81;
+}
+
+.settings link_to{
+    text-decoration: underline;
+}
+
+.time {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todetail, .toedit, .todelete {
+    text-decoration: underline;
+}
+
+.todetail:hover {
+    color: #A78C81;
+}
+
+.toedit:hover {
+    color: #A78C81;
+}
+
+.todelete:hover {
+    color: #A78C81;
+}
+
+.todeletelike:hover {
+    color: #A78C81;
+}
+
+.tolike:hover {
+    color: #A78C81;
+}

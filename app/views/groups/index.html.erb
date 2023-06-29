@@ -1,49 +1,57 @@
-<%= link_to "新規投稿ページへ", new_group_path %>
-<%= link_to "全体の投稿", groups_path %>
-<br>
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
 
 <div class="groups-container">
-<div class="search">
-<h3>はっしゅたぐ　しぼりこみ</h3>
-    <%= form_tag({controller:"groups",action:"index"}, method: :get) do %>
-        <%= select_tag :search, options_for_select([[@fan,@fan],[@fan2,@fan2],[@fan3,@fan3]]) %>
-        <%= submit_tag "しぼりこむ" %>
-    <% end %>
-</div>
-
-<% @groups.each do |t| %>
-    <div class="group">
-        <div class="main">
-            <%= t.name %>
-            <%= image_tag t.image_url, size: "250x200" if t.image? %>
-            <%= t.content %> 
-            <div class="hashtag">
-            #<td><%= render_with_hashtags(t.hashbody) %></td>
-            </div>
+    <div class="links-group-index">
+        <div class="link-tonew-index">
+            <%= link_to "新規投稿ページへ", new_group_path %>
         </div>
-        <div class="time"><%= t.created_at %></div>
-        <div class="settings">
-            <%= link_to "詳細へ", group_path(t.id) %>
-            <% if user_signed_in? && current_user.id == t.user_id %>
-                <%= link_to "編集する", edit_group_path(t.id) %>
-                <%= link_to "削除する", group_path(t.id), method: :delete %>
-            <% end %> 
-        </div>
-        <div class="like">
-            <% if user_signed_in? %>
-                <% if current_user.already_liked?(t) %>
-                    <%= link_to group_like_path(id: t.id,group_id: t.id), method: :delete do %>
-                        <p>いいねを取り消す<%= t.likes.count %></p>
-                    <% end %>
-                <% else %>
-                    <%= link_to group_likes_path(id: t.id, group_id: t.id), method: :post do %>
-                        <p>いいね<%= t.likes.count %></p>
-                    <% end %>
-                <% end %>
-                <% else %>
-                    <p>いいねの数 = </p><%= t.likes.count %>
-            <% end %>
+        <div class="link-toall-index">
+            <%= link_to "全体の投稿", groups_path%>
         </div>
     </div>
-<% end %>
+<br>
+    <div class="search">
+        <%= form_tag({controller:"groups",action:"index"}, method: :get) do %>
+            <%= select_tag :search, options_for_select([[@fan,@fan],[@fan2,@fan2],[@fan3,@fan3]], include_blank: "推しを選択" ), {class: 'select-fan-index'} %>
+            <%= submit_tag "しぼりこむ" %>
+        <% end %>
+    </div>
+
+    <% @groups.each do |t| %>
+        <div class="group">
+            <div class="main">
+                <%= t.name %>
+                <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                <%= t.content %> 
+                <br/>
+                <div class="hashtag-index">
+                    #<td><%= render_with_hashtags(t.hashbody) %></td>
+                </div>
+            </div>
+            <div class="time"><%= t.created_at %></div>
+            <div class="settings">
+                <%= link_to "詳細へ", group_path(t.id), class: "todetail" %>
+                <% if user_signed_in? && current_user.id == t.user_id %>
+                    <%= link_to "編集する", edit_group_path(t.id), class: "toedit" %>
+                    <%= link_to "削除する", group_path(t.id), method: :delete, class: "todelete" %>
+                <% end %> 
+            </div>
+            <div class="like">
+                <% if user_signed_in? %>
+                    <% if current_user.already_liked?(t) %>
+                        <%= link_to group_like_path(id: t.id,group_id: t.id), method: :delete, class: "todeletelike" do %>
+                            <p class="todeletelike">いいねを取り消す<%= t.likes.count %></p>
+                        <% end %>
+                    <% else %>
+                        <%= link_to group_likes_path(id: t.id, group_id: t.id), method: :post, class: "tolike" do %>
+                            <p class="tolike">いいね<%= t.likes.count %></p>
+                        <% end %>
+                    <% end %>
+                    <% else %>
+                        <p>いいねの数 = </p><%= t.likes.count %>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
 </div>
